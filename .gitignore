@@ -30,3 +30,5 @@ next-env.d.ts
 # Misc
 .DS_Store
 Thumbs.db
+
+.vercel

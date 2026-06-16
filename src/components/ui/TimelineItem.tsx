@@ -1,10 +1,9 @@
 'use client'
 
 import { motion, useReducedMotion } from 'framer-motion'
-import { Briefcase, GraduationCap, MapPin, Calendar } from 'lucide-react'
+import { MapPin, Calendar } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import type { WorkExperience, Education } from '@/types'
-import { cn } from '@/lib/utils'
 
 type TimelineItemProps = (WorkExperience | Education) & { side?: 'left' | 'right' }
 

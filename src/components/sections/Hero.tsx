@@ -118,10 +118,8 @@ export default function Hero() {
   const { scrollY } = useScroll()
 
   // Parallax — canvas drifts up + fades as user scrolls away
-  const rawY       = useTransform(scrollY, [0, 600], [0, -80])
-  const rawOpacity = useTransform(scrollY, [0, 350], [1, 0])
-  const rawScale   = useTransform(scrollY, [0, 600], [1, 0.88])
-  const springY    = useSpring(rawY,       { stiffness: 80, damping: 20 })
+  const rawY    = useTransform(scrollY, [0, 600], [0, -80])
+  const springY = useSpring(rawY, { stiffness: 80, damping: 20 })
 
   // Text drifts up slightly slower
   const textY      = useTransform(scrollY, [0, 600], [0, -40])

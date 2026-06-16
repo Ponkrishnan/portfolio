@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Github, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import type { Project } from '@/types'
 import { cn } from '@/lib/utils'
