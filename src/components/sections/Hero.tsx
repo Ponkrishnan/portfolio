@@ -197,11 +197,19 @@ export default function Hero() {
               View Projects
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
             </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a href={personalInfo.resumeUrl} download>
-                <Download className="h-4 w-4" />
-                Resume
-              </a>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => {
+                const link = document.createElement('a')
+                link.href = personalInfo.resumeUrl
+                link.download = 'Ponkrishnan_Resume.pdf'
+                link.click()
+              }}
+              className="group"
+            >
+              <Download className="h-4 w-4" />
+              Resume
             </Button>
           </motion.div>
 

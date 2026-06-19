@@ -43,12 +43,12 @@ function NeuralScene() {
   const { nodeFlat, edgeFlat, edges, sigPos, sigEdgeArr, sigT, nodeColors, sprite } =
     useMemo(() => {
       const sprite  = makeCircleSprite()
-      const nodes   = spherePoints(N_NODES, 1.65)
+      const nodes   = spherePoints(N_NODES, 1.45)
       const nodeFlat = new Float32Array(N_NODES * 3)
       nodes.forEach((p, i) => { nodeFlat[i*3]=p.x; nodeFlat[i*3+1]=p.y; nodeFlat[i*3+2]=p.z })
 
       // Edges — connect nodes within distance threshold
-      const THRESH_SQ = 1.45 * 1.45
+      const THRESH_SQ = 1.28 * 1.28
       const edges: [number, number][] = []
       for (let i = 0; i < N_NODES; i++)
         for (let j = i + 1; j < N_NODES; j++)
@@ -196,7 +196,7 @@ function Stars() {
 export default function HeroCanvas() {
   return (
     <Canvas
-      camera={{ position: [0, 0, 6.5], fov: 44 }}
+      camera={{ position: [0, 0, 7.5], fov: 40 }}
       gl={{ antialias: true, alpha: true }}
       style={{ background: 'transparent' }}
       dpr={[1, 1.5]}
